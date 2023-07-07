@@ -1,0 +1,230 @@
+:root {
+    --borderColor: rgb(191, 191, 191);
+}
+
+
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.4rem 1rem;
+    background-color: white;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 997;
+}
+.youtube-logo {
+    width: 25%;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+.youtube-logo img {
+    width: 8rem;
+    height: 100%;
+}
+.youtube-logo .sidebar-menu {
+    display: flex;
+    align-items: center;
+}
+.youtube-logo .sidebar-icon {
+    font-size: 27px;
+    cursor: pointer;
+}
+.center-section {
+    display: flex;
+    align-items: center;
+    height: 41px;
+    width: 50%;
+}
+.center-section.mobile {
+    width: 90%;
+}
+.center-section .input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+}
+.center-section .input input {
+    width: 100%;
+    height: 100%;
+    padding: 0.2rem 1rem;
+    font-size: 19px;
+    border: solid 1.4px var(--borderColor);
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    font-size: 15px;
+}
+.center-section .input .icon {
+    position: absolute;
+    right: 8px;
+    cursor: pointer;
+}
+.center-section .input input:focus {
+    outline: none;
+}
+input[type="search"]::-webkit-search-cancel-button
+{
+  position: relative;
+  right: 20px;
+}
+
+.center-section button, .mobile-search button {
+    border: solid 1.4px var(--borderColor);
+    border-left: none;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    cursor: pointer;
+}
+.center-section .voice-icon, .mobile-search .voice-icon{
+    margin-left: 10px;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 35px;
+}
+.center-section .voice-icon:hover {
+    background-color: rgb(231, 231, 231);
+    border-radius: 40px;
+    transition: 0.5s;
+}
+
+
+.right-section {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 20%;
+    column-gap: 15px;
+}
+.right-section img {
+    width: 28px;
+}
+.right-section .notif {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.right-section .notif .notif-icon {
+    font-size: 10px;
+}
+.right-section img:nth-child(5) {
+    border-radius: 45px;
+    margin-left: 5px;
+    
+}
+.right-section .icon-mobile {
+    display: none;
+}
+.notif .notif-count {
+    color: white;
+    background-color: rgb(145, 4, 4);
+    position: absolute;
+    border-radius: 20px;
+    top: -4px;
+    right: -6px;
+    font-size: 12px;
+    padding: 2px 4px;
+}
+.mobile-search {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 998;
+    background-color: white;
+    display: flex;
+    padding: 1rem 0;
+    justify-content: space-between;
+    padding: 0.4rem 1rem;
+    align-items: center;
+    visibility: hidden;
+}
+@media (max-width: 750px) {
+    .center-section.comp {
+        display: none;
+    }
+    .right-section .icon-mobile {
+        display: inline-block;
+        cursor: pointer;
+    }
+    .mobile-search {
+        visibility: visible;
+    }
+
+
+}
+@media (max-width: 550px) {
+    .icon-mobile2 {
+        display: none;
+    }
+    .voice-icon.icon-mobile {
+        display: none;
+    }
+}
+
+.autocomplete-box {
+    position: absolute;
+    top: 100%;
+    left: 15px;
+    right: 0;
+    box-shadow: 0 0 5px rgb(167, 167, 167);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    z-index: 1001;
+    background-color: white;
+}
+.autocomplete-box .autocomplete-link{
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 550;
+    margin-top: 3px;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+
+.virtual-keyboard-box {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    background-color: white;
+    z-index: 1003;
+}
+
+.simple-keyboard {
+    width: 100%;
+}
+
+@media (max-width: 1050px) {
+    .virtual-keyboard-box {
+        width: 87%;
+    }
+}
+@media (max-width: 500px) {
+    .virtual-keyboard-box {
+        width: 100%;
+    }
+}
+
+
+
+
+.icon {
+    cursor: pointer;
+}

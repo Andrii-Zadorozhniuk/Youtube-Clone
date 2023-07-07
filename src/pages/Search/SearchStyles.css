@@ -1,0 +1,74 @@
+.search-section {
+    padding-left: 6rem;
+    padding-top: 6rem;
+    width: 100%;
+    height: 100vh;
+}
+.search-section .videos {
+    width: 100%;
+}
+.search-section .videos .video {
+    display: flex;
+    margin-top: 20px;
+    column-gap: 20px;
+    cursor: pointer;
+}
+.search-section .videos .video .thumbnail {
+    min-width: 360px;
+    width: 360px;
+    position: relative;
+}
+.search-section .videos .video .thumbnail img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.search-section .videos .video .thumbnail p {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background-color: rgba(6, 6, 6, 0.636);
+    color: white;
+    padding: 0.1rem 0.4rem ;
+    font-size: 13px;
+}
+.search-section .videos .video .video-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-top: 10px;
+}
+.search-section .videos .video .video-info .channel {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.search-section .videos .video .video-info img {
+    height: 36px;
+    border-radius: 50px;
+}
+
+@media (max-width: 750px) {
+    .search-section .videos .video .video-info {
+        flex-direction: row;
+        column-gap: 20px;
+    }
+    .search-section .videos{
+        padding-right: 1rem;
+    }
+    .search-section .videos .video {
+        flex-direction: column;
+    }
+    .search-section .videos .video .thumbnail {
+        min-width: 100%;
+    }
+}
+@media (max-width: 500px) {
+    .search-section {
+        padding-left: 0;
+        padding-top: 3rem;
+    }
+    .search-section .videos{
+        padding: 0 1rem;
+    }
+}

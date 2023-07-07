@@ -1,0 +1,109 @@
+.home-section {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    padding-top: 5rem;
+    padding-left: 3.5rem;
+    position: relative;
+}
+.home-section .tabs {
+    display: flex;
+    column-gap: 20px;
+    overflow: scroll;
+    padding: 0 0.5rem;
+    padding-left: 2rem;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+.home-section .tabs button {
+    border: none;
+    background-color: rgb(234, 234, 234);
+    white-space: nowrap;
+    padding: 0.6rem 1.3rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 550;
+    transition: 0.5s;
+}
+
+.home-section .tabs button.clicked {
+    background-color: black;
+    color: white;
+}
+.home-section .tabs button:hover {
+    background-color: rgb(201, 201, 201);
+}
+.home-section .tabs::-webkit-scrollbar {
+    display: none;
+  }
+  
+
+.home-section .videos {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    padding: 3rem;
+    padding-top: 2.5rem;
+    column-gap: 20px;
+    justify-content: center;
+    row-gap: 30px;
+
+}
+.home-section .videos .video { 
+    cursor: pointer;
+}
+.home-section .videos .video .thumbnail {
+    width: 100%;
+    position: relative;
+}
+.home-section .videos .video .thumbnail img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.home-section .videos .video .thumbnail p {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background-color: rgba(6, 6, 6, 0.636);
+    color: white;
+    padding: 0.1rem 0.4rem ;
+    font-size: 13px;
+}
+.home-section .videos .video .video-info {
+    display: flex;
+    column-gap: 10px;
+    margin-top: 15px;
+}
+.home-section .videos .video .video-info img {
+    height: 36px;
+    border-radius: 50px;
+}
+.home-section .videos .video .video-text p {
+    margin-top: 7px;
+}
+
+
+@media (max-width: 1150px) {
+    .home-section .videos {
+        grid-template-columns: repeat(2, 50%);
+        column-gap: 40px;
+    }
+}
+@media (max-width : 700px) {
+
+    .home-section .videos {
+        grid-template-columns: repeat(1, 90%);
+        padding: 0;
+        padding-top: 1.7rem;
+    }
+    .home-section .tabs {
+        padding-left: 0.5rem;
+    }
+}
+@media (max-width: 500px) {
+    .home-section {
+        padding-left: 0;
+    }
+}
+
