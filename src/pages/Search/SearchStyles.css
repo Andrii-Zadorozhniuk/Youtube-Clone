@@ -61,6 +61,7 @@
     }
     .search-section .videos .video .thumbnail {
         min-width: 100%;
+        width: 100%;
     }
 }
 @media (max-width: 500px) {

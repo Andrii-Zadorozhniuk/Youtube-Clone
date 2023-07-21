@@ -129,3 +129,8 @@
         padding-top: 1.7rem;
     }
 }
+@media (min-width: 1500px) {
+    .channel-videos {
+        grid-template-columns: repeat(4, 24%);
+    }
+}

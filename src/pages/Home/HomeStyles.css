@@ -107,3 +107,9 @@
     }
 }
 
+@media (min-width: 1600px) {
+    .home-section .videos {
+        grid-template-columns: repeat(4, 24%);
+    }
+}
+
